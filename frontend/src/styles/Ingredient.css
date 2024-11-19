@@ -1,0 +1,39 @@
+/* src/styles/Ingredient.css */
+.ingredient-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ingredient-button {
+  background-size: cover; /* Ensure the image covers the button */
+  background-position: center; /* Center the image */
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #1919a8;
+  padding: 20px; /* Adjust padding as needed */
+  width: 180px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  overflow: hidden; /* Hide overflow to maintain button shape */
+  transition: background-color 0.3s, transform 0.3s;
+  position: relative;
+}
+
+.ingredient-button:hover {
+  transform: scale(1.05);
+}
+
+.ingredient-text {
+  top: 10px; /* Distance from top */
+  left: 10px; /* Distance from left */
+  z-index: 1; /* Ensure text is above the background */
+  font-weight: bold;
+}

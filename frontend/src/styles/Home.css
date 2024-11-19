@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Container for the search bar */
+.search-bar-container {
+  display: flex;
+  justify-content: center; /* Center the search bar horizontally */
+  align-items: center;
+  margin: 60px auto; /* Add some spacing around the search bar */
+  width: 100%; /* Full width */
+  max-width: 600px; /* Limit the maximum width */
+}
+
+/* Styling for the input field */
+.search-input {
+  flex-grow: 1; /* Allow the input to take up available space */
+  padding: 10px 15px; /* Add padding for a better look */
+  font-size: 16px; /* Set font size */
+  border: 1px solid #ccc; /* Light border around the input */
+  border-radius: 25px 0 0 25px; /* Rounded corners, left side */
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.search-input:focus {
+  border-color: #000000; /* Change border color on focus */
+}
+
+/* Styling for the search button */
+.search-button {
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Set font size */
+  color: white; /* Text color */
+  background-color: #c71e88; /* Button background color */
+  border: 1px solid #c71e88; /* Matching border color */
+  border-radius: 0 25px 25px 0; /* Rounded corners, right side */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+}
+
+/* Change background color on hover */
+.search-button:hover {
+  background-color: #a51a71; /* Darker background on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Title for popular recipes */
+.popular-recipes-title {
+  font-family: "Roboto";
+  text-align: left;
+  font-weight: bold;
+  color: #1919a8;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+/* Grid container for cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 16px; /* Space between cards, increased from 6px for better visibility */
+  margin-bottom: 20px; /* Space below the card grid */
+}
+
+/* Ensure cards fit within grid items */
+.card-item {
+  background-color: #fff; /* Example background color */
+  border: 1px solid #ddd; /* Example border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+/* Pagination container */
+.pagination {
+  display: flex;
+  justify-content: center; /* Center pagination buttons */
+  margin-top: 20px;
+}
+
+/* Pagination buttons */
+.pagination-button {
+  border: 1px solid #c71e88; /* Border color */
+  background-color: white; /* Button background color */
+  color: #c71e88; /* Text color */
+  padding: 10px 15px; /* Padding */
+  margin: 0 5px; /* Spacing between buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Pagination button hover state */
+.pagination-button:hover {
+  background-color: #c71e88; /* Background color on hover */
+  color: white; /* Text color on hover */
+}
+
+/* Active pagination button */
+.pagination-button.active {
+  background-color: #c71e88; /* Active button background color */
+  color: white; /* Active button text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 columns per row on smaller screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 columns per row on even smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* 1 column per row on very small screens */
+  }
+}
